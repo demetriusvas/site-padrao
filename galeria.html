@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Galeria</title>
+  </head>
+  <body>
+    
+    <header><!-- HEADER -->
+      <nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-transparente"><!-- NAVBAR -->
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <i class="fas fa-code fa-2x mr-1"></i>
+          <strong>Demetrius Vignati</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar"><!-- MENU HAMBURGER -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicos.html">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="galeria.html">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contato.html">Contato</a>
+            </li>    
+          </ul>
+        </div><!-- /MENU HAMBURGER -->
+      </nav><!-- /NAVBAR -->
+    </header><!-- /HEADER -->
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron parallax-secundaria">
+        <div class="container text-white">
+          <h1 class="display-3">Galeria</h1>
+          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <p><a class="btn btn-primary btn-lg" href="contato.html" role="button">Entre em contato &raquo;</a></p>
+        </div>
+      </div>
+      
+      <!-- GALERIA -->
+      <div class="container">
+        <div class="row">
+            <div class="col-md-4 galeria">
+                <img src="img/img_lights.jpg" class="rounded shadow" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+                <img src="img/img_5terre.jpg" class="rounded shadow" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+                <img src="img/img_forest.jpg" class="rounded shadow" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+            </div>
+
+            <div class="col-md-4 galeria">
+                <img src="img/img_lights.jpg" class="rounded shadow" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+                <img src="img/img_5terre.jpg" class="rounded shadow" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+                <img src="img/img_forest.jpg" class="rounded shadow" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+            </div>
+            
+            <div class="col-md-4 galeria">
+                <img src="img/img_lights.jpg" class="rounded shadow" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
+                <img src="img/img_5terre.jpg" class="rounded shadow" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
+                <img src="img/img_forest.jpg" class="rounded shadow" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
+            </div>
+        </div>
+      </div>
+
+      <!-- Modal for full size images on click-->
+      <div id="modal01" class="galeria-full-screen" style="padding-top:0" onclick="this.style.display='none'">
+          <span class="galeria-full-screen-botao-fechar">×</span>
+          <div class="galeria-full-screen-conteudo galeria-full-screen-animacao">
+              <img id="img01" class="galeria-full-screen-conteudo-imagem">
+              <p id="caption"></p>
+          </div>
+      </div>
+          
+    </main>
+    
+    <footer class="footer mt-auto py-3 bg-dark">
+      <div class="container text-center d-flex">
+        <span class="text-secondary">&copy; Copyright - 2020</span>
+        <a href="https://github.com/demetriusvas" class="text-secondary ml-auto" target="_blank">
+          <i class="fab fa-github fa-lg"></i>
+          <small class="ml-auto">Desenvolvido por: Demetrius Vignati</small>
+        </a>
+      </div>
+    </footer>
+
+    <script>       
+      //Imagens em Full Screen
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }    
+    </script>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
